@@ -1,3 +1,2 @@
-# Suigip.github.io
-### This is my Art 74 portfolio website.
-I am a sudent at San Jose State University
+# suigip.github.io
+### I am a sudent at San Jose State University. This is my Art 74 portfolio website.
