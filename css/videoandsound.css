@@ -1,0 +1,104 @@
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+body {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #000;
+    background-image: url(images/Glitch Test 2 .png);
+}
+
+#wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+}
+
+.title
+{
+position:relative;
+    width: 680px;
+    height:99px;
+    margin-left:29px;
+    margin-right:21px;
+}
+
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    padding: center;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #004cff;
+    color: white;}
+* {box-sizing: border-box}
+
+.container {
+  position: relative;
+  width: 1024;
+  max-width: 1025;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+
+* {
+    margin:0;
+    padding:0; 
+    -webkit-margin-before: 0; 
+    -webkit-margin-after: 0;
+    -webkit-padding-start: 0;
+    }
