@@ -1,9 +1,62 @@
-<!DOCTYPE html>
-<html>
-<title>Net Art</title>
-<link rel="stylesheet" type="text/css" href="css/net art.css">
+﻿<!DOCTYPE html>
+<html manifest="offline.appcache">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/net art.css">
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-<header>
+	
+	<!-- This ensures the canvas works on IE9+.  Don't remove it! -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<!-- Standardised web app manifest -->
+	<link rel="manifest" href="appmanifest.json" />
+	
+	<!-- Allow fullscreen mode on iOS devices. (These are Apple specific meta tags.) -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="apple-touch-icon" sizes="256x256" href="icon-256.png" />
+	<meta name="HandheldFriendly" content="true" />
+	
+	<!-- Chrome for Android web app tags -->
+	<meta name="mobile-web-app-capable" content="yes" />
+	<link rel="shortcut icon" sizes="256x256" href="icon-256.png" />
+	
+	<title>Net Art</title>
+
+	
+	<style type="text/css">
+		body
+		{
+			background-color: white;
+			color: white;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		
+		#side
+		{
+			height: 150px;
+			position: absolute;
+			left: 0px;
+			right: 0px;
+		}
+		
+		#main
+		{
+			position: absolute;
+			left: 0px;
+			top: 150px;
+			bottom: 0px;
+			right: 0px;
+		}
+		
+		iframe
+		{
+			border: none;
+		}
+	</style>
+ <header>
                 <div class="container">
                             <a href="index.html">
                                 <img src="https://th3dot.com/wp-content/uploads/2017/10/PORTFOLIO-1.png" width="150" alt="Logo Portfolio">
@@ -26,9 +79,13 @@ body {
 </head>
 <body>
 <div id="wrapper">
-  
+    
 
-<div class="topnav">
+    
+<body>
+	<script src="jquery-2.1.1.min.js"></script>
+	
+	<div class="topnav">
   <a href="index.html"><i class="fas fa-home"></i></a>
   <a href="remix.html">Remix</a>
   <a href="glitch.html">Glitch</a>
@@ -37,11 +94,9 @@ body {
   <a class="active" href="net art.html">Net Art</a>
   <a href="final.html">Final</a>
 </div>
-
-<div style="padding-left:16px">
-  <img src="images/caution sign.jpg">
- 
-</div>
-
-</body>
-</html>
+    
+	<div id="main">
+		<iframe allowfullscreen="true" src="game.html" scrolling="no" noresize="noresize" />
+	</div>
+</body> 
+</html> 
