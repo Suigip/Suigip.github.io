@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><canvas id="pjs" tabindex="0" width="1100" height="500" style="image-rendering: -webkit-optimize-contrast !important;"></canvas><script language="javascript" type="text/javascript" src="javascript/jquery-1.11.1.min.js"></script><script src="javascript/mousetrap.min.js"></script><script language="javascript" type="text/javascript" src="javascript/processing-1.4.8.js"></script><script language="javascript" type="text/javascript" src="javascript/attrchange.js"></script><script language="javascript" type="text/javascript" src="javascript/iframe_giveFocus.js"></script><script language="javascript" type="text/javascript" src="javascript/all_OPextension.js"></script><script language="javascript" type="text/javascript" src="javascript/pjs_OPextension.js"></script><script id="pjsCode" type="application/processing">
+ArrayList<Ball> balls= new ArrayList<Ball>();
+void setup() {
+size (1100, 500);for (int i = 0; i <30; i++) 
+{
+balls.add(new Ball());
+}
+}
+void draw()
+{
+background(0);for (int i = 0; i <balls.size(); i++) 
+{
+Ball b = balls.get(i);b.move(); b.display();if (b.alpha <=0) 
+{
+balls.remove(i);
+i =i-1;
+}
+}
+if (mousePressed) 
+{
+balls. add(new Ball());
+}
+}
+class Ball 
+{
+float x, y;
+float mx, my;
+color alpha;
+Ball() 
+{
+x= mouseX;
+y= mouseY;
+mx= random(-20, 20);
+my= random(-20, 20);
+alpha = 60;
+}
+void display () 
+{
+fill(random(255),random(255), alpha);
+ellipse (x, y, 100, 100);
+}
+void move() 
+{
+x+=mx;
+y+=my;
+if (x<0||x>width) 
+{
+mx*=-.95;
+alpha--;
+}
+if (y<0||y>height) 
+{
+mx*=.95;
+alpha--;
+}
+}
+}</script><span style="position: absolute; top: 0px; left: 0px; opacity: 0; font-family: PjsEmptyFont, fantasy;">AAAAAAAA</span></body>
+</html>
